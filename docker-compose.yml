@@ -1,0 +1,6 @@
+version: '2.1'
+services:
+  flyimg:
+    image: gitlab.sanasport.cz:5005/eshop/sanasport/flyimg:post-v1
+    ports:
+     - "8083:80"
