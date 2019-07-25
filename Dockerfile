@@ -8,6 +8,9 @@ RUN usermod -u 1000 www-data && \
     chown -R www-data:www-data var/  web/uploads/ && \
     chmod 777 -R var/  web/uploads/
 
+RUN sed -i -e "s/server\s{/server {\n    client_max_body_size 16M;/g" /etc/nginx/conf.d/flyimage.conf && \
+    echo -e "upload_max_filesize=16M\npost_max_size=16M\nmemory_limit = 64M" > /usr/local/etc/php/conf.d/php.ini
+
 EXPOSE 80
 
 CMD /usr/bin/supervisord

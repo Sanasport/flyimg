@@ -1,4 +1,4 @@
-IMAGE := gitlab.sanasport.cz:5005/eshop/sanasport/flyimg:post-v1
+IMAGE := gitlab.sanasport.cz:5005/eshop/sanasport/flyimg:post-v2
 
 help:
 	@echo "\nhelp\nbuild-and-push\nbuild\npush\n"
